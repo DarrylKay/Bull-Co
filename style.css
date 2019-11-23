@@ -17,12 +17,14 @@ body {
 *************************************************************************************/
 
 nav {
-  height: 7vh;
+  height: 6vh;
   background: white;
   position: fixed;
+  top: 0;
   width: 100vw;
-  z-index: 4;
+  z-index: 20 !important;
   border-bottom: 1px solid rgb(107, 71, 23);
+  opacity: 1;
 }
 
 nav img {
@@ -108,7 +110,7 @@ nav .nav-links li .link:hover {
 #main-image-section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 80px 0;
 }
 #main-image-section .title {
   text-align: left;
@@ -868,6 +870,7 @@ then change it to 1 on class of current*/
 #contact .container .contact-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
 }
 #contact .container .contact-container .info-container {
   display: grid;
@@ -876,7 +879,7 @@ then change it to 1 on class of current*/
 
 #contact .container .c4ntact-container .info-container .map iframe {
   width: 100%;
-  height: 100%;
+  height: 90%;
 }
 #contact .container .contact-container .info-container .info-box {
   margin: 0 auto;
@@ -884,8 +887,7 @@ then change it to 1 on class of current*/
   display: flex;
   align-items: center;
   justify-content: center;
-
-  width: 100%;
+  width: 95%;
 }
 #contact .container .contact-container .info-container .info-box .info {
   padding: 0 5px;
@@ -934,7 +936,7 @@ then change it to 1 on class of current*/
   float: right;
 }
 #contact .container .contact-container .image {
-  width: 100%;
+  width: 95%;
   height: 100%;
   object-fit: contain;
   object-position: center;
