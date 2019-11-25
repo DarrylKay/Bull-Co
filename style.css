@@ -8,7 +8,8 @@
 
 body {
   text-align: center;
-  width: 100%;
+  width: 100vw;
+  overflow-x: hidden;
   font-family: "Work Sans", sans-serif;
   color: rgb(75, 75, 75);
 }
@@ -96,23 +97,23 @@ nav .nav-links li .link:hover {
 
   nav .nav-links {
     position: fixed;
-    background: rgb(204, 204, 204);
-    height: 100vh;
+    background: white;
+    border-bottom: 1px solid black;
+    top: 7vh;
+    height: 50vh;
     width: 100vw;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    clip-path: circle(100px at 100% -22%);
-    -webkit-clip-path: circle(100px at 100% -22%);
-    -webkit-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
-    pointer-events: none;
+    -webkit-transform: translate(-800px);
+            transform: translate(-800px);
+    -webkit-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
   }
   nav .nav-links.open {
-    clip-path: circle(1300px at 100% -22%);
-    -webkit-clip-path: circle(1300px at 100% -22%);
-    pointer-events: all;
+    -webkit-transform: translate(-50px);
+            transform: translate(-50px);
     width: 100vw;
   }
 }
