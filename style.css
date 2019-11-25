@@ -2,6 +2,7 @@
                              GENERAL    
 *************************************************************************************/
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -17,7 +18,7 @@ body {
 *************************************************************************************/
 
 nav {
-  height: 6vh;
+  height: 7vh;
   background: white;
   position: fixed;
   top: 0;
@@ -32,11 +33,16 @@ nav img {
 }
 
 nav .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style: none;
   width: 80%;
   height: 100%;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-left: 10%;
   margin-right: 120px;
@@ -67,7 +73,9 @@ nav .nav-links li .link:hover {
     position: absolute;
     left: 5%;
     top: 8%;
+    -webkit-transform: translate(0, -5%, -8%, 0);
     transform: translate(0, -5%, -8%, 0);
+    -o-object-fit: contain;
     object-fit: contain;
   }
   nav .hamburger {
@@ -75,6 +83,7 @@ nav .nav-links li .link:hover {
     cursor: pointer;
     right: 5%;
     top: 30%;
+    -webkit-transform: translate(-5%, -30%);
     transform: translate(-5%, -30%);
     z-index: 2;
   }
@@ -90,9 +99,13 @@ nav .nav-links li .link:hover {
     background: rgb(204, 204, 204);
     height: 100vh;
     width: 100vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     clip-path: circle(100px at 100% -22%);
     -webkit-clip-path: circle(100px at 100% -22%);
+    -webkit-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
     pointer-events: none;
   }
@@ -110,14 +123,23 @@ nav .nav-links li .link:hover {
 #main-image-section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 0;
+  padding: 80px 0 30px 0;
 }
 #main-image-section .title {
   text-align: left;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: left;
+  -ms-flex-align: left;
   align-items: left;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 20px 0;
 }
@@ -151,6 +173,7 @@ nav .nav-links li .link:hover {
   width: 100%;
   height: 100%;
   opacity: 0;
+  -webkit-transition: opacity 0.6s ease-in-out;
   transition: opacity 0.6s ease-in-out;
   background: red;
 }
@@ -178,6 +201,14 @@ then change it to 1 on class of current*/
 
 #main-image-section .slide:nth-child(4) {
   background: url("./assets/main-4.jpg") no-repeat center center/cover;
+}
+
+@media screen and (max-width: 1500px) {
+  #main-image-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -218,15 +249,26 @@ then change it to 1 on class of current*/
   max-width: 1200px;
   margin: 0 auto;
   padding: 60px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 #about .container .info-box {
   text-align: left;
   text-transform: uppercase;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 #about .container .info-box h4 {
@@ -254,8 +296,14 @@ then change it to 1 on class of current*/
   line-height: 30px;
 }
 #about .container .info-box .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 #about .container .info-box .social .fab {
@@ -279,6 +327,9 @@ then change it to 1 on class of current*/
 
 @media screen and (max-width: 950px) {
   #about .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -338,9 +389,18 @@ then change it to 1 on class of current*/
 #gallery .container .title {
   text-align: left;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: left;
+  -ms-flex-align: left;
   align-items: left;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 40px 0;
 }
@@ -377,6 +437,7 @@ then change it to 1 on class of current*/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  -webkit-transform: scale(0.95);
   transform: scale(0.95);
 }
 #gallery .container .gallery-container .box-2 {
@@ -386,6 +447,7 @@ then change it to 1 on class of current*/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  -webkit-transform: scale(0.95);
   transform: scale(0.95);
 }
 #gallery .container .gallery-container .box-3 {
@@ -395,6 +457,7 @@ then change it to 1 on class of current*/
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
+  -webkit-transform: scale(0.95);
   transform: scale(0.95);
 }
 #gallery .container .gallery-container .box-4 {
@@ -404,6 +467,7 @@ then change it to 1 on class of current*/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  -webkit-transform: scale(0.95);
   transform: scale(0.95);
 }
 #gallery .container .gallery-container .box-5 {
@@ -413,6 +477,7 @@ then change it to 1 on class of current*/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  -webkit-transform: scale(0.95);
   transform: scale(0.95);
 }
 #gallery .container .gallery-container .box-6 {
@@ -422,6 +487,7 @@ then change it to 1 on class of current*/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  -webkit-transform: scale(0.95);
   transform: scale(0.95);
 }
 
@@ -474,18 +540,36 @@ then change it to 1 on class of current*/
 #reviews .container .reviews-container {
   width: 100%;
   height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   text-align: center;
 }
 #reviews .container .reviews-container .title {
   text-align: left;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: left;
+  -ms-flex-align: left;
   align-items: left;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 #reviews .container .reviews-container .title h4 {
@@ -518,15 +602,25 @@ then change it to 1 on class of current*/
   position: absolute;
   width: 400px;
   height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   opacity: 0;
 }
 
 #reviews .container .reviews-container .review-box .review.active {
   opacity: 1;
+  -webkit-transition: all 0.7s ease-in-out 0.3s;
   transition: all 0.7s ease-in-out 0.3s;
 }
 
@@ -540,7 +634,9 @@ then change it to 1 on class of current*/
 }
 #reviews .container .reviews-container .review-box .review.active i {
   opacity: 1;
+  -webkit-transition: all 0.7s ease-in-out 0.3s;
   transition: all 0.7s ease-in-out 0.3s;
+  -webkit-transform: translateX(380px);
   transform: translateX(380px);
 }
 #reviews .container .reviews-container .review-box .review .review-text {
@@ -558,7 +654,9 @@ then change it to 1 on class of current*/
 }
 #reviews .container .reviews-container .review-box .review.active .review-text {
   opacity: 1;
+  -webkit-transform: translateX(440px);
   transform: translateX(440px);
+  -webkit-transition: all 0.7s ease-in-out 0.3s;
   transition: all 0.7s ease-in-out 0.3s;
 }
 #reviews .container .reviews-container .review-box .review .name {
@@ -572,7 +670,9 @@ then change it to 1 on class of current*/
 }
 #reviews .container .reviews-container .review-box .review.active .name {
   opacity: 1;
+  -webkit-transform: translateX(535px);
   transform: translateX(535px);
+  -webkit-transition: all 0.7s ease-in-out 0.3s;
   transition: all 0.7s ease-in-out 0.3s;
 }
 
@@ -580,7 +680,9 @@ then change it to 1 on class of current*/
   width: 100%;
   height: 500px;
   margin-top: 30px;
+  -o-object-fit: none;
   object-fit: none;
+  -o-object-position: center;
   object-position: center;
 }
 
@@ -589,9 +691,18 @@ then change it to 1 on class of current*/
     grid-template-columns: 1fr;
   }
   #reviews .container .reviews-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: left;
+    -ms-flex-pack: left;
     justify-content: left;
+    -webkit-box-align: left;
+    -ms-flex-align: left;
     align-items: left;
     text-align: left;
   }
@@ -600,9 +711,18 @@ then change it to 1 on class of current*/
     width: 100%;
     text-align: left;
     text-transform: uppercase;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: left;
+    -ms-flex-align: left;
     align-items: left;
+    -webkit-box-pack: left;
+    -ms-flex-pack: left;
     justify-content: left;
   }
 
@@ -622,7 +742,9 @@ then change it to 1 on class of current*/
 
   #reviews .container .reviews-container .review-box .review.active i {
     opacity: 1;
+    -webkit-transition: all 0.7s ease-in-out 0.3s;
     transition: all 0.7s ease-in-out 0.3s;
+    -webkit-transform: translateX(370px);
     transform: translateX(370px);
   }
   #reviews
@@ -632,7 +754,9 @@ then change it to 1 on class of current*/
     .review.active
     .review-text {
     opacity: 1;
+    -webkit-transform: translateX(425px);
     transform: translateX(425px);
+    -webkit-transition: all 0.7s ease-in-out 0.3s;
     transition: all 0.7s ease-in-out 0.3s;
   }
 
@@ -640,6 +764,7 @@ then change it to 1 on class of current*/
     width: 100%;
     height: 500px;
     margin-top: 10px;
+    -o-object-fit: contain;
     object-fit: contain;
   }
 }
@@ -647,7 +772,9 @@ then change it to 1 on class of current*/
 @media screen and (max-width: 350px) {
   #reviews .container .reviews-container .review-box .review.active i {
     opacity: 1;
+    -webkit-transition: all 0.7s ease-in-out 0.3s;
     transition: all 0.7s ease-in-out 0.3s;
+    -webkit-transform: translateX(340px);
     transform: translateX(340px);
   }
   #reviews
@@ -657,13 +784,17 @@ then change it to 1 on class of current*/
     .review.active
     .review-text {
     opacity: 1;
+    -webkit-transform: translateX(410px);
     transform: translateX(410px);
+    -webkit-transition: all 0.7s ease-in-out 0.3s;
     transition: all 0.7s ease-in-out 0.3s;
   }
 
   #reviews .container .reviews-container .review-box .review.active .name {
     opacity: 1;
+    -webkit-transform: translateX(495px);
     transform: translateX(495px);
+    -webkit-transition: all 0.7s ease-in-out 0.3s;
     transition: all 0.7s ease-in-out 0.3s;
   }
   #reviews .container .reviews-container .review-box .review .review-text {
@@ -693,9 +824,18 @@ then change it to 1 on class of current*/
 #prices .container .title {
   text-align: left;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: left;
+  -ms-flex-align: left;
   align-items: left;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 20px 0;
   z-index: 4;
@@ -718,8 +858,14 @@ then change it to 1 on class of current*/
 }
 #prices .container .price-box {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 #prices .container .price-box .image-container {
@@ -733,6 +879,7 @@ then change it to 1 on class of current*/
   float: left;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 #prices .container .price-box .price-list {
@@ -772,6 +919,9 @@ then change it to 1 on class of current*/
     font-size: 1.9rem;
   }
   #prices .container .price-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   #prices .container .price-box .image-container {
@@ -806,19 +956,29 @@ then change it to 1 on class of current*/
   padding: 10px 0;
 }
 #sponsers .container .sponsers-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 #sponsers .container .sponsers-container .image {
   width: 250px;
   height: auto;
   padding: 0 10px;
+  -o-object-fit: contain;
   object-fit: contain;
 }
 
 @media screen and (max-width: 500px) {
   #sponsers .container .sponsers-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   #sponsers .container .sponsers-container .image {
@@ -845,9 +1005,18 @@ then change it to 1 on class of current*/
 #contact .container .title {
   text-align: left;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: left;
+  -ms-flex-align: left;
   align-items: left;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 20px 0;
 }
@@ -884,8 +1053,14 @@ then change it to 1 on class of current*/
 #contact .container .contact-container .info-container .info-box {
   margin: 0 auto;
   text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   width: 95%;
 }
@@ -938,19 +1113,21 @@ then change it to 1 on class of current*/
 #contact .container .contact-container .image {
   width: 95%;
   height: 100%;
+  -o-object-fit: contain;
   object-fit: contain;
+  -o-object-position: center;
   object-position: center;
 }
 
 @media screen and (max-width: 520px) {
   #contact .container .title h4 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   #contact .container .title h1 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
   #contact .container .title h1 span {
-    font-size: 1.9rem;
+    font-size: 2.1rem;
   }
   #contact .container .contact-container {
     display: grid;
@@ -960,16 +1137,45 @@ then change it to 1 on class of current*/
   #contact .container .contact-container .info-container {
     display: grid;
     grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
   }
   #contact .container .contact-container .info-container .info-box {
     margin: 10px auto;
     text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
-
     width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+  }
+
+  #contact .container .contact-container .info-container .info-box .info {
+    float: center;
+    margin: 0 auto;
+    padding: 10px 0;
+  }
+
+  #contact
+    .container
+    .contact-container
+    .info-container
+    .info-box
+    .contact-times
+    .walk-in {
+    float: center;
+    text-align: center;
+  }
+  #contact .container .contact-container .image {
+    display: none;
   }
 }
 
